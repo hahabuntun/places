@@ -1,0 +1,77 @@
+# ========================
+# Python
+# ========================
+*.py[cod]
+*.pyo
+*.pyd
+__pycache__/
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ========================
+# Django
+# ========================
+*.log
+db.sqlite3
+staticfiles/
+media/
+.env*
+local_settings.py
+
+# Django migrations (optional: include if you want to track them)
+**/migrations/
+!**/migrations/__init__.py
+
+# ========================
+# Testing / coverage
+# ========================
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# ========================
+# Virtual environments
+# ========================
+venv/
+env/
+ENV/
+.venv/
+env.bak/
+venv.bak/
+
+# ========================
+# Docker
+# ========================
+# Keep main Dockerfiles and docker-compose.yml tracked
+docker-compose.override.yml    # local dev overrides
+postgres_data/                # database volume
+.env                       # environment variables
+
+# ========================
+# IDEs / editors
+# ========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*~
+*.DS_Store
+
+# ========================
+# Logs
+# ========================
+logs/
+*.log

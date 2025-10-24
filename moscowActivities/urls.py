@@ -1,13 +1,16 @@
 from django.contrib import admin
-from rest_framework import routers
-from django.shortcuts import render
-from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+from django.urls import path, include
 
-def map_view(request):
-    return render(request, 'index.html')
 
 
 urlpatterns = [
-    path("", map_view, name="home"),
     path('admin/', admin.site.urls),
+    path('summernote/', include('django_summernote.urls')),
+    path("", include("activitiesApp.urls"))
 ]
+
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
